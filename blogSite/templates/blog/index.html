@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+
+
+
+
+
+
+
+
+
+</style>
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> Simple Django Blog App </h3>
+                    <p class="text-light">Share your knowledge with the world. &nbsp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6 float-left ">
+            <div class="card my-4">
+                <h5 class="card-header">Authors</h5>
+                <div class="card-body">
+                    <p class="card-text"> Check out all the authors.</p>
+                    <a href="{% url 'blog:authors' %}" class="btn btn-danger">All authors</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 float-right ">
+            <div class="card my-4">
+                <h5 class="card-header">Blogs</h5>
+                <div class="card-body">
+                    <p class="card-text"> Check out all the blogs.</p>
+                    <a href="{% url 'blog:blogs' %}" class="btn btn-primary">All blogs</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{%endblock%}
