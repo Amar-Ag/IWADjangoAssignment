@@ -4,14 +4,10 @@ from django.views.generic import ListView, DetailView, DeleteView
 from .models import BlogArticle, Author
 
 
-def homePage(request):
-    return render(request, 'blog/index.html', context=None)
-
-
 class BlogsList(ListView):
     queryset = BlogArticle.objects.all().order_by('-created_at')
     context_object_name = 'blogs'
-    template_name = 'blog/blogs.html'
+    template_name = 'blog/index.html'
     paginate_by = 3
 
 
