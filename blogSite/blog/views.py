@@ -19,7 +19,7 @@ class BlogsDetail(DetailView):
 
 
 class AuthorList(ListView):
-    queryset = Author.objects.all().order_by('name')
+    model = Author
     context_object_name = 'authors'
     template_name = 'blog/authors.html'
     paginate_by = 3
